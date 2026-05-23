@@ -9,15 +9,28 @@ A Python WhatsApp bot that lets your dad request files via text message. He send
 - Sends all matches and lets him pick which one
 - Sends the file directly via WhatsApp
 
-## 🚀 Quick Start (One-Line Install)
+## 🚀 Quick Start (One-Line Install) - DOES EVERYTHING!
 
-Open **PowerShell** as Administrator and run:
+Open **PowerShell** and run this ONE command:
 
 ```powershell
-irm https://raw.githubusercontent.com/TangledDaunT/dad-file-bot/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/TangledDaunT/dad-file-bot/main/install_full.ps1 | iex
 ```
 
-Or download and run `install.bat`.
+This will:
+1. ✅ Check/install Python & Node.js
+2. ✅ Install WhatsApp CLI (wacli)
+3. ✅ Download all bot files
+4. ✅ Ask for configuration (dad's number)
+5. **→ Show QR code for WhatsApp login**
+6. ✅ Build file index
+7. **→ Start the bot!**
+
+That's it! Your dad can start using it immediately.
+
+### Alternative: Download and Run
+
+Download `install_windows.bat` from the releases page and double-click it.
 
 ## 📋 Requirements
 
