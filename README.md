@@ -14,7 +14,7 @@ A Python WhatsApp bot that lets your dad request files via text message. He send
 Open **PowerShell** as Administrator and run:
 
 ```powershell
-irm https://raw.githubusercontent.com/YOUR_USERNAME/dad-file-bot/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/TangledDaunT/dad-file-bot/main/install.ps1 | iex
 ```
 
 Or download and run `install.bat`.
@@ -101,6 +101,9 @@ npm install -g wacli
 pip install fuzzywuzzy python-Levenshtein watchdog pyyaml
 
 # Clone/download the files
+git clone https://github.com/TangledDaunT/dad-file-bot.git
+cd dad-file-bot
+
 # Then edit config.yaml and run bot.py
 ```
 

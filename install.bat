@@ -69,9 +69,11 @@ if not exist "%INSTALL_DIR%" (
 
 cd /d "%INSTALL_DIR%"
 
-REM Download files from GitHub (or copy if local)
+REM Download files from GitHub
 echo [2/4] Downloading Dad File Bot files...
 echo     Installing to: %INSTALL_DIR%
+
+set GITHUB_REPO=TangledDaunT/dad-file-bot
 
 REM If running from local folder, copy files
 if exist "%~dp0bot.py" (
@@ -80,12 +82,12 @@ if exist "%~dp0bot.py" (
     copy "%~dp0*.yaml" "%INSTALL_DIR%\" >nul
     copy "%~dp0*.txt" "%INSTALL_DIR%\" >nul
 ) else (
-    echo     Downloading from GitHub...
-    powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/YOUR_USERNAME/dad-file-bot/main/bot.py' -OutFile 'bot.py'}"
-    powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/YOUR_USERNAME/dad-file-bot/main/config.yaml' -OutFile 'config.yaml'}"
-    powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/YOUR_USERNAME/dad-file-bot/main/requirements.txt' -OutFile 'requirements.txt'}"
-    powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/YOUR_USERNAME/dad-file-bot/main/file_search.py' -OutFile 'file_search.py'}"
-    powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/YOUR_USERNAME/dad-file-bot/main/wacli_wrapper.py' -OutFile 'wacli_wrapper.py'}"
+    echo     Downloading from GitHub (%GITHUB_REPO%)...
+    powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/%GITHUB_REPO%/main/bot.py' -OutFile 'bot.py'}"
+    powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/%GITHUB_REPO%/main/config.yaml' -OutFile 'config.yaml'}"
+    powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/%GITHUB_REPO%/main/requirements.txt' -OutFile 'requirements.txt'}"
+    powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/%GITHUB_REPO%/main/file_search.py' -OutFile 'file_search.py'}"
+    powershell -Command "& {Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/%GITHUB_REPO%/main/wacli_wrapper.py' -OutFile 'wacli_wrapper.py'}"
 )
 echo [OK] Files downloaded
 echo.

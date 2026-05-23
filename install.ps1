@@ -1,10 +1,10 @@
 # Dad File Bot - PowerShell One-Line Installer
 # ============================================
-# Run with: irm https://raw.githubusercontent.com/YOUR_USERNAME/dad-file-bot/main/install.ps1 | iex
+# Run with: irm https://raw.githubusercontent.com/TangledDaunT/dad-file-bot/main/install.ps1 | iex
 
 param(
     [string]$InstallDir = "$env:USERPROFILE\dad-file-bot",
-    [string]$GithubRepo = "YOUR_USERNAME/dad-file-bot"
+    [string]$GithubRepo = "TangledDaunT/dad-file-bot"
 )
 
 $ErrorActionPreference = "Stop"
