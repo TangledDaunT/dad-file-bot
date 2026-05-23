@@ -1,0 +1,4 @@
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.25.1
+watchdog==4.0.0
+pyyaml==6.0.1
